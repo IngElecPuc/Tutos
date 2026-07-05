@@ -35,6 +35,16 @@ Jupyter generará una URL con un token como esta:
 http://127.0.0.1:8888/lab?token=xxxxxxxxxxxxxxxxxxxx
 ```
 Pero este 127.0.0.1 no servirá desde tu computadora aún.
+
+En el caso de que quieras una conexión rápida e insegura (no recomedado) puedes hacer:
+```sh 
+http://<IP_PUBLIA>:8888
+``
+Donde no es necesario agregar el token, pero para eso tienes que lanzarlo con esa opción. Y si lo quieres más inseguro aún, porque eres burro y trabajaste todo con el usuario root en tu máquina puedes hacer también:
+```sh 
+jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token='' --allow-root
+```
+
 ### Abrir el Puerto en la Seguridad de AWS
 Ve a la consola de AWS → EC2.
 
